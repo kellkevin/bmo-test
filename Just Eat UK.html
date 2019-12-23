@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+	<title>Just Eat UK</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Search for restaurants in area</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://www.just-eat.co.uk/<datalist><option>https://www.just-eat.co.uk/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=postcode<datalist><option>name=postcode</option><option>//input[@name='postcode']</option><option>//div[@id='skipToMain']/form/div/div/label/input</option><option>//label/input</option><option>css=input[name="postcode"]</option></datalist></td><td></td>
+</tr>
+<tr><td>sendKeys</td><td>name=postcode<datalist><option>name=postcode</option><option>//input[@name='postcode']</option><option>//div[@id='skipToMain']/form/div/div/label/input</option><option>//label/input</option><option>css=input[name="postcode"]</option></datalist></td><td>${KEY_ENTER}</td>
+</tr>
+<tr><td>type</td><td>name=postcode<datalist><option>name=postcode</option><option>//input[@name='postcode']</option><option>//div[@id='skipToMain']/form/div/div/label/input</option><option>//label/input</option><option>css=input[name="postcode"]</option></datalist></td><td>AR511AA</td>
+</tr>
+<tr><td>click</td><td>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Enter your postcode'])[1]/following::button[1]<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Enter your postcode'])[1]/following::button[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Find restaurants delivering right now, near you'])[1]/following::button[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Top rated nearby'])[1]/preceding::button[1]</option><option>//button[@type='submit']</option><option>//div[@id='skipToMain']/form/div/button</option><option>//div/button</option><option>css=button.Form_c-search-btn_1EEhL</option></datalist></td><td></td>
+</tr>
+<tr><td>assertTextPresent</td><td><datalist><option></option></datalist></td><td>Open restaurant</td>
+</tr>
+<tr><td>close</td><td>win_ser_local<datalist><option>win_ser_local</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Invalid Address</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://just-eat.co.uk<datalist><option>just-eat.co.uk</option><option>http://just-eat.co.uk</option></datalist></td><td></td>
+</tr>
+<tr><td>sendKeys</td><td>name=postcode<datalist><option>name=postcode</option><option>//input[@name='postcode']</option><option>//div[@id='skipToMain']/form/div/div/label/input</option><option>//label/input</option><option>css=input[name="postcode"]</option></datalist></td><td>${KEY_DOWN}</td>
+</tr>
+<tr><td>type</td><td>name=postcode<datalist><option>name=postcode</option><option>//input[@name='postcode']</option><option>//div[@id='skipToMain']/form/div/div/label/input</option><option>//label/input</option><option>css=input[name="postcode"]</option></datalist></td><td>thart</td>
+</tr>
+<tr><td>click</td><td>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Enter your postcode'])[1]/following::span[1]<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Enter your postcode'])[1]/following::span[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Find restaurants delivering right now, near you'])[1]/following::span[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Top rated nearby'])[1]/preceding::span[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='See all'])[1]/preceding::span[1]</option><option>xpath=//*/text()[normalize-space(.)='Search']/parent::*</option><option>//div[@id='skipToMain']/form/div/button/span</option><option>//div/button/span</option><option>css=span.Form_c-search-btn-text_1jLYr</option></datalist></td><td></td>
+</tr>
+<tr><td>verifyElementPresent</td><td>id=errorMessage<datalist><option>id=errorMessage</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Search'])[1]/following::div[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Enter your postcode'])[1]/following::div[3]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Top rated nearby'])[1]/preceding::div[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='See all'])[1]/preceding::div[1]</option><option>xpath=//*/text()[normalize-space(.)='Please enter a full, valid postcode']/parent::*</option><option>//div[@id='errorMessage']</option><option>//div[@id='skipToMain']/form/div[2]</option><option>//form/div[2]</option><option>css=#errorMessage</option></datalist></td><td>"Please enter a full, valid postcode"</td>
+</tr>
+<tr><td>close</td><td>win_ser_local<datalist><option>win_ser_local</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">See Details of the restaurant</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://www.just-eat.co.uk/<datalist><option>https://www.just-eat.co.uk/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=postcode<datalist><option>name=postcode</option><option>//input[@name='postcode']</option><option>//div[@id='skipToMain']/form/div/div/label/input</option><option>//label/input</option><option>css=input[name="postcode"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=postcode<datalist><option>name=postcode</option><option>//input[@name='postcode']</option><option>//div[@id='skipToMain']/form/div/div/label/input</option><option>//label/input</option><option>css=input[name="postcode"]</option></datalist></td><td>ar511aa</td>
+</tr>
+<tr><td>click</td><td>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Enter your postcode'])[1]/following::button[1]<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Enter your postcode'])[1]/following::button[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Find restaurants delivering right now, near you'])[1]/following::button[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Top rated nearby'])[1]/preceding::button[1]</option><option>//button[@type='submit']</option><option>//div[@id='skipToMain']/form/div/button</option><option>//div/button</option><option>css=button.Form_c-search-btn_1EEhL</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>xpath=(.//*[normalize-space(text()) and normalize-space(.)='CrossSelling Pizzas Test'])[1]/preceding::h3[1]<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='CrossSelling Pizzas Test'])[1]/preceding::h3[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='New'])[2]/preceding::h3[2]</option><option>xpath=//*/text()[normalize-space(.)='Eng - iOS - Test Restaurant']/parent::*</option><option>//main[@id='skipToMain']/main/div/div[2]/div[4]/div/div/section/a/div[3]/h3</option><option>//div[3]/h3</option><option>css=h3.c-listing-item-title</option></datalist></td><td></td>
+</tr>
+<tr><td>verifyElementPresent</td><td>link=Menu<datalist><option>link=Menu</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='AR51 7TA'])[1]/following::a[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Testville'])[1]/following::a[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Reviews'])[1]/preceding::a[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Info'])[1]/preceding::a[2]</option><option>//a[contains(text(),'Menu')]</option><option>//div[@id='restaurant']/div[2]/div/div[3]/ul/li/a</option><option>xpath=(//a[contains(@href, '/restaurants-iostr/menu')])[8]</option><option>//div[3]/ul/li/a</option><option>css=a.currentPage</option></datalist></td><td></td>
+</tr>
+<tr><td>verifyElementPresent</td><td>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Home'])[1]/following::span[2]<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Home'])[1]/following::span[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Help'])[1]/following::span[4]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Eng - iOS - Test Restaurant'])[1]/preceding::span[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Categories'])[1]/preceding::span[3]</option><option>xpath=//*/text()[normalize-space(.)='AR51 Area51']/parent::*</option><option>//div[@id='breadcrumb']/p/span[2]/a/span</option><option>//span[2]/a/span</option><option>css=a[title="AR51 Area51"] &gt; span</option></datalist></td><td></td>
+</tr>
+<tr><td>close</td><td>win_ser_local<datalist><option>win_ser_local</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
